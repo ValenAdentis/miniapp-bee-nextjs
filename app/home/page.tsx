@@ -181,7 +181,7 @@ export default function Home() {
         <nav
           className="
             absolute
-            bottom-[26px]
+            bottom-[20px]
             left-1/2
             z-50
             h-[65px]

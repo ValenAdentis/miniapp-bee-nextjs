@@ -1,106 +1,106 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
+
+const items = [
+  {
+    name: "Playgame",
+    icon: "/gamepaneicon.png",
+    icon1: "/ygamepane.png",
+  },
+  {
+    name: "Mine",
+    icon: "/toolicon.png",
+    icon1: "/ytoolicon.png"
+  },
+  {
+    name: "Home",
+    icon: "/whitehomeicon.png",
+    icon1: "/homeicon.png"
+  },
+  {
+    name: "Earn",
+    icon: "/moneyicon.png",
+    icon1: "/ymoneyicon.png",
+  },
+  {
+    name: "Airdrop",
+    icon: "/airdropicon.png",
+    icon1: "/yairdropicon.png",
+  },
+];
 
 export default function BottomNav() {
-  return (
-    
-    <div className="fixed bottom-[25px] left-1/2 z-50 h-[65px] w-[355px] -translate-x-1/2">
+  const [active, setActive] = useState("Home");
 
-      {/* Your PNG rounded rectangle */}
+  return (
+    <div className="fixed bottom-[20px] left-1/2 z-50 h-[65px] w-[355px] -translate-x-1/2">
+      
+      {/* Your PNG background */}
       <Image
         src="/roundedrectangle.png"
-        alt="Navigation background"
+        alt=""
         fill
         className="object-contain"
         priority
       />
 
-      {/* Icons on top of PNG */}
-      <div className="absolute inset-0 flex items-center justify-around px-[24px]">
+      {/* Buttons */}
+      <div className="absolute top-[15px] inset-0 flex items-center justify-around px-[24px]">
+        {items.map((item) => {
+          const isActive = active === item.name;
 
-        {/* Playgame */}
-        <button
-          onClick={() => console.log("Playgame")}
-          className="flex h-full w-[45px] flex-col items-center justify-center"
-        >
-          <Image
-            src="/gamepaneicon.png"
-            alt="Playgame"
-            width={22}
-            height={22}
-          />
-          <span className="mt-[3px] text-[8px] text-[#aaa]">
-            Playgame
-          </span>
-        </button>
+          return (
+            <button
+              key={item.name}
+              type="button"
+              onClick={() => setActive(item.name)}
+              className="relative flex h-full w-[45px] flex-col items-center justify-center"
+            >
+              {/* Icon */}
+              <Image
+                src={`${isActive?item.icon1:item.icon}`}
+                alt={item.name}
+                width={22}
+                height={22}
+                className={`
+                  object-contain
+                  transition-all duration-200
+                  ${active ? "-translate-y-2 scale-125 bg-red" : "translate-y-0 scale-100"}
+                `}
+              />
 
-        {/* Mine */}
-        <button
-          onClick={() => console.log("Mine")}
-          className="flex h-full w-[45px] flex-col items-center justify-center"
-        >
-          <Image
-            src="/toolicon.png"
-            alt="Mine"
-            width={22}
-            height={22}
-          />
-          <span className="mt-[3px] text-[8px] text-[#aaa]">
-            Mine
-          </span>
-        </button>
+              {/* Text */}
+              <span
+                className={`
+                  mt-[2px] whitespace-nowrap text-[8px]
+                  transition-all duration-200
+                  ${
+                    isActive
+                      ? "font-semibold text-[#ff9900]"
+                      : "text-[#aaa]"
+                  }
+                `}
+              >
+                {item.name}
+              </span>
 
-        {/* Home */}
-        <button
-          onClick={() => console.log("Home")}
-          className="flex h-full w-[45px] flex-col items-center justify-center"
-        >
-          <Image
-            src="/homeicon.png"
-            alt="Home"
-            width={22}
-            height={22}
-          />
-          <span className="mt-[3px] text-[8px] font-semibold text-[#ff9900]">
-            Home
-          </span>
-        </button>
-
-        {/* Earn */}
-        <button
-          onClick={() => console.log("Earn")}
-          className="flex h-full w-[45px] flex-col items-center justify-center"
-        >
-          <Image
-            src="/moneyicon.png"
-            alt="Earn"
-            width={22}
-            height={22}
-          />
-          <span className="mt-[3px] text-[8px] text-[#aaa]">
-            Earn
-          </span>
-        </button>
-
-        {/* Airdrop */}
-        <button
-          onClick={() => console.log("Airdrop")}
-          className="flex h-full w-[45px] flex-col items-center justify-center"
-        >
-          <Image
-            src="/airdropicon.png"
-            alt="Airdrop"
-            width={22}
-            height={22}
-          />
-          <span className="mt-[3px] text-[8px] text-[#aaa]">
-            Airdrop
-          </span>
-        </button>
-
+              {/* Orange indicator */}
+              {isActive && (
+                <div className="" >
+                    <img
+                        src="/angleicon.png"
+                        alt="Pointer"
+                        className="h-[14px] w-[14px] object-contain"
+                    />
+                </div>
+                
+              )}
+            </button>
+          );
+        })}
       </div>
     </div>
   );
 }
-//sdddddddddddddddddd
