@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <PageTransition>
       <main className="flex min-h-screen justify-center bg-white items-center">
-      <div className="relative h-[778px] w-[393px] overflow-hidden bg-black text-white rounded-[22px]">
+      <div className="relative h-[778px] w-[393px] overflow-hidden bg-black text-white">
 
         {/* ================================================= */}
         {/* HEADER */}

@@ -64,7 +64,7 @@ export default function Page() {
     <PageTransition>
       <main className="flex min-h-screen justify-center bg-white items-center">
       {/* 393 x 649 Application */}
-      <div className="relative mx-auto h-[649px] rounded-[22px] w-[393px] overflow-hidden bg-black text-white">
+      <div className="relative mx-auto h-[649px]  w-[393px] overflow-hidden bg-black text-white">
         {/* =====================================
             HEADER
         ====================================== */}

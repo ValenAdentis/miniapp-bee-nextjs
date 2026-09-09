@@ -94,7 +94,7 @@ export default function WalletPage({
       {/* EXACT SCREEN: 393 x 694 */}
       {/* ================================================= */}
 
-      <main className="relative h-[694px] w-[393px] shrink-0 overflow-hidden rounded-[22px] bg-black text-white">
+      <main className="relative h-[694px] w-[393px] shrink-0 overflow-hidden bg-black text-white">
 
         {/* ================================================= */}
         {/* HEADER */}
@@ -298,7 +298,7 @@ export default function WalletPage({
             left-1/2
           "
         >
-            <Footer name="" />
+            <Footer name="xxx" />
         </nav>
 
       </main>

@@ -93,7 +93,7 @@ export default function EarnPage({
     <PageTransition>
       <div className="flex min-h-screen justify-center bg-white items-center">
 
-      <div className="relative overflow-hidden h-[694px] w-[393px] bg-black rounded-[22px]">
+      <div className="relative overflow-hidden h-[694px] w-[393px] bg-black ">
 
         {/* ================================================== */}
         {/* HEADER */}

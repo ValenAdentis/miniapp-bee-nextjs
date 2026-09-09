@@ -85,7 +85,7 @@ export default function AirdropPage({
       {/* 393 x 694 APP CANVAS */}
       {/* ================================================= */}
 
-      <div className="relative h-[664px] w-[393px] shrink-0 overflow-hidden bg-black text-white rounded-[22px]">
+      <div className="relative h-[664px] w-[393px] shrink-0 overflow-hidden bg-black text-white">
 
         {/* ================================================= */}
         {/* HEADER */}

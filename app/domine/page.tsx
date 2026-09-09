@@ -80,7 +80,7 @@ export default function MinePage({
       {/* EXACT APP SIZE: 393 x 818 */}
       {/* ================================================= */}
 
-      <div className="relative h-[818px] w-[393px] shrink-0 rounded-[22px] overflow-hidden bg-black text-white ">
+      <div className="relative h-[818px] w-[393px] shrink-0  overflow-hidden bg-black text-white ">
 
         {/* ================================================= */}
         {/* HEADER */}
