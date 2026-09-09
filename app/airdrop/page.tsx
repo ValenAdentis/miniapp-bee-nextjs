@@ -1,4 +1,5 @@
 "use client";
+import PageTransition from "@/components/PageTransition";
 
 type AirdropPageProps = {
   onClose?: () => void;
@@ -77,11 +78,7 @@ export default function AirdropPage({
   onAirdrop,
 }: AirdropPageProps) {
   return (
-    /*
-     * Outer container:
-     * Centers the 393 x 694 app screen
-     * horizontally AND vertically.
-     */
+    <PageTransition>
     <div className="flex min-h-screen w-full items-center justify-center bg-white ">
 
       {/* ================================================= */}
@@ -231,5 +228,7 @@ export default function AirdropPage({
 
       </div>
     </div>
+    </PageTransition>
+   
   );
 }

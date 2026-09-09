@@ -1,4 +1,5 @@
 "use client";
+import PageTransition from "@/components/PageTransition";
 
 type EarnPageProps = {
   onClose?: () => void;
@@ -89,7 +90,8 @@ export default function EarnPage({
   onNavigate,
 }: EarnPageProps) {
   return (
-    <div className="flex min-h-screen justify-center bg-white items-center">
+    <PageTransition>
+      <div className="flex min-h-screen justify-center bg-white items-center">
 
       <div className="relative overflow-hidden h-[694px] w-[393px] bg-black rounded-[22px]">
 
@@ -215,5 +217,6 @@ export default function EarnPage({
 
       </div>
     </div>
+    </PageTransition>
   );
 }

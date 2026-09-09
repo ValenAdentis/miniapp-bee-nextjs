@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import PageTransition from "@/components/PageTransition";
 
 type Wallet = {
   id: string;
@@ -87,7 +88,8 @@ export default function WalletPage({
   };
 
   return (
-    <div className="flex min-h-screen w-full items-center justify-center bg-white">
+    <PageTransition>
+        <div className="flex min-h-screen w-full items-center justify-center bg-white">
       {/* ================================================= */}
       {/* EXACT SCREEN: 393 x 694 */}
       {/* ================================================= */}
@@ -288,7 +290,7 @@ export default function WalletPage({
         {/* ================================================= */}
         {/* BOTTOM NAVIGATION */}
         {/* ================================================= */}
-
+    
         <nav
           className="
             absolute
@@ -301,5 +303,6 @@ export default function WalletPage({
 
       </main>
     </div>
+</PageTransition>
   );
 }

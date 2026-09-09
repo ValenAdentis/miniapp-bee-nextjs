@@ -1,5 +1,7 @@
 "use client";
 
+import PageTransition from "@/components/PageTransition";
+
 type MinePageProps = {
   onClose?: () => void;
   onNavigate?: (page: string) => void;
@@ -71,7 +73,7 @@ export default function MinePage({
   onMine,
 }: MinePageProps) {
   return (
-    /* Center the 393 x 818 app on the screen */
+    <PageTransition>
     <div className="flex min-h-screen w-full items-center justify-center bg-white">
 
       {/* ================================================= */}
@@ -367,5 +369,7 @@ export default function MinePage({
 
       </div>
     </div>
+    </PageTransition>
+   
   );
 }

@@ -2,37 +2,46 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import {useRouter} from "next/navigation";
 
 const items = [
   {
     name: "Playgame",
     icon: "/gamepaneicon.png",
     icon1: "/ygamepane.png",
+    path: "/earnkey"
   },
   {
     name: "Mine",
     icon: "/toolicon.png",
-    icon1: "/ytoolicon.png"
+    icon1: "/ytoolicon.png",
+    path: "/domine"
   },
   {
     name: "Home",
     icon: "/whitehomeicon.png",
-    icon1: "/homeicon.png"
+    icon1: "/homeicon.png",
+    path: "/home"
   },
   {
     name: "Earn",
     icon: "/moneyicon.png",
     icon1: "/ymoneyicon.png",
+    path:"/earncoin"
+
   },
   {
     name: "Airdrop",
     icon: "/airdropicon.png",
     icon1: "/yairdropicon.png",
+    path:"/airdrop"
   },
 ];
 
+
 export default function BottomNav() {
   const [active, setActive] = useState("Home");
+  const router =useRouter();
 
   return (
     <div className=" bottom-[20px] left-1/2 z-50 h-[65px] w-[355px] -translate-x-1/2">
@@ -55,7 +64,10 @@ export default function BottomNav() {
             <button
               key={item.name}
               type="button"
-              onClick={() => setActive(item.name)}
+              onClick={() => {
+                router.push(item.path);
+                setActive(item.name);
+              }}
               className="relative flex h-full w-[45px] flex-col items-center justify-center"
             >
               {/* Icon */}
@@ -67,7 +79,7 @@ export default function BottomNav() {
                 className={`
                   object-contain
                   transition-all duration-200
-                  ${active ? "-translate-y-2 scale-125 bg-red" : "translate-y-0 scale-100"}
+                  ${isActive ? "-translate-y-2 scale-125 bg-red" : "translate-y-0 scale-100"}
                 `}
               />
 

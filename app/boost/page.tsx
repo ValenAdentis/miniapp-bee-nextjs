@@ -1,5 +1,7 @@
 "use client";
 
+import PageTransition from "@/components/PageTransition";
+
 type HomePageProps = {
   onClose?: () => void;
   onMenu?: () => void;
@@ -83,10 +85,7 @@ export default function HomePage({
   };
 
   return (
-    /*
-     * Center the exact 393 x 778 application screen
-     * horizontally and vertically.
-     */
+    <PageTransition>
     <div className="flex min-h-screen w-full items-center justify-center bg-white">
 
       {/* ================================================= */}
@@ -325,5 +324,7 @@ export default function HomePage({
 
       </div>
     </div>
+    </PageTransition>
+    
   );
 }

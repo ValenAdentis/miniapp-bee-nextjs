@@ -1,4 +1,5 @@
 "use client";
+import PageTransition from "@/components/PageTransition";
 
 type SettingsPageProps = {
   onClose?: () => void;
@@ -52,7 +53,8 @@ export default function SettingsPage({
   };
 
   return (
-    <div className="flex min-h-screen w-full items-center justify-center bg-white">
+    <PageTransition>
+      <div className="flex min-h-screen w-full items-center justify-center bg-white">
       {/* ================================================= */}
       {/* EXACT APP SIZE: 393 x 694 */}
       {/* ================================================= */}
@@ -278,5 +280,7 @@ export default function SettingsPage({
 
       </main>
     </div>
+    </PageTransition>
+    
   );
 }

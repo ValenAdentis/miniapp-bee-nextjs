@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import PageTransition from "@/components/PageTransition";
 
 const games = [
   {
@@ -60,7 +61,8 @@ export default function Page() {
   const [activeNav, setActiveNav] = useState("Playgame");
 
   return (
-    <main className="flex min-h-screen justify-center bg-white items-center">
+    <PageTransition>
+      <main className="flex min-h-screen justify-center bg-white items-center">
       {/* 393 x 649 Application */}
       <div className="relative mx-auto h-[649px] rounded-[22px] w-[393px] overflow-hidden bg-black text-white">
         {/* =====================================
@@ -130,5 +132,7 @@ export default function Page() {
         </nav>
       </div>
     </main>
+    </PageTransition>
+    
   );
 }

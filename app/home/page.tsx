@@ -6,10 +6,12 @@ import BeeHeader from "@/components/beeheader";
 import ConnectWallet from "@/components/connectwallet";
 import IconButton from "@/components/iconbutton";
 import Footer from "@/components/footer";
+import PageTransition from "@/components/PageTransition";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen justify-center bg-white items-center">
+    <PageTransition>
+      <main className="flex min-h-screen justify-center bg-white items-center">
       <div className="relative h-[778px] w-[393px] overflow-hidden bg-black text-white rounded-[22px]">
 
         {/* ================================================= */}
@@ -195,6 +197,8 @@ export default function Home() {
 
       </div>
     </main>
+    </PageTransition>
+    
   );
 }
 
