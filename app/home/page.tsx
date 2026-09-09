@@ -109,6 +109,8 @@ export default function Home() {
             font-medium
             text-white
             font-sans
+            transition-all duration-200
+            active:scale-90
           "
         >
           <img
@@ -186,7 +188,6 @@ export default function Home() {
             z-50
             h-[65px]
             w-[315px]
-            -translate-x-1/2
           "
         >
           <Footer />

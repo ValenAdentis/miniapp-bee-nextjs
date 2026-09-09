@@ -35,7 +35,7 @@ export default function BottomNav() {
   const [active, setActive] = useState("Home");
 
   return (
-    <div className="fixed bottom-[20px] left-1/2 z-50 h-[65px] w-[355px] -translate-x-1/2">
+    <div className=" bottom-[20px] left-1/2 z-50 h-[65px] w-[355px] -translate-x-1/2">
       
       {/* Your PNG background */}
       <Image

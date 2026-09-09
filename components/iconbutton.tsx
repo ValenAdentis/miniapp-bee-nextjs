@@ -15,9 +15,10 @@ export default function IconButton({
     <button
       type="button"
       onClick={onClick}
-      className="flex w-[45px] flex-col items-center p-0"
+      className="flex w-[45px] flex-col items-center p-0 transition-all duration-200
+    active:scale-90 "
     >
-      <div className="flex h-[43px] w-[43px] items-center justify-center rounded-[10px] bg-[#292929]">
+      <div className="border-dashed border-1 flex h-[43px] w-[43px] items-center justify-center rounded-[10px] bg-[#292929]">
         <img
           src={src}
           alt={text}
