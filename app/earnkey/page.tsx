@@ -128,7 +128,7 @@ export default function Page() {
             BOTTOM NAVIGATION
         ====================================== */}
         <nav className="absolute bottom-[20px] left-1/2">
-          <Footer />
+          <Footer name="Playgame" />
         </nav>
       </div>
     </main>

@@ -319,7 +319,7 @@ export default function HomePage({
         {/* ================================================= */}
 
         <nav className="absolute bottom-[20px] left-1/2">
-            <Footer />
+            <Footer name="" />
         </nav>
 
       </div>

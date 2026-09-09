@@ -3,12 +3,14 @@
 import Image from "next/image";
 import BeeHeader from "@/components/beeheader";
 import { useRouter } from "next/navigation";
+import PageTransition from "@/components/PageTransition";
 
 export default function Home() {
   const router=useRouter();
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-white">
+    <PageTransition>
+         <main className="flex min-h-screen items-center justify-center bg-white">
       {/* 393 × 674 App Screen */}
       <div className="relative h-[674px] w-[393px] overflow-hidden rounded-[22px] bg-black">
 
@@ -85,5 +87,7 @@ export default function Home() {
         </button>
       </div>
     </main>
+    </PageTransition>
+   
   );
 }

@@ -223,7 +223,7 @@ export default function AirdropPage({
         {/* ================================================= */}
 
         <nav className="absolute bottom-[20px] left-1/2">
-          <Footer />
+          <Footer name="Airdrop" />
         </nav>
 
       </div>

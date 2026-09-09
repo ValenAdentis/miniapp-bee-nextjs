@@ -38,8 +38,12 @@ const items = [
   },
 ];
 
+type NameProps={
+  name:string,
+};
 
-export default function BottomNav() {
+
+export default function BottomNav({name}:NameProps) {
   const [active, setActive] = useState("Home");
   const router =useRouter();
 
@@ -58,8 +62,7 @@ export default function BottomNav() {
       {/* Buttons */}
       <div className="absolute top-[15px] inset-0 flex items-center justify-around px-[24px]">
         {items.map((item) => {
-          const isActive = active === item.name;
-
+          const isActive =  (name=== item.name); 
           return (
             <button
               key={item.name}

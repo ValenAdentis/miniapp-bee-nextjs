@@ -192,7 +192,7 @@ export default function Home() {
             w-[315px]
           "
         >
-          <Footer />
+          <Footer name="Home" />
         </nav>
 
       </div>

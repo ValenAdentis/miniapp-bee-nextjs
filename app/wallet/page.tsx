@@ -298,7 +298,7 @@ export default function WalletPage({
             left-1/2
           "
         >
-            <Footer />
+            <Footer name="" />
         </nav>
 
       </main>
