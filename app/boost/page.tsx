@@ -92,7 +92,7 @@ export default function HomePage({
       {/* EXACT SCREEN: 393 x 778 */}
       {/* ================================================= */}
 
-        <div className="relative h-[778px] w-[393px] shrink-0 overflow-hidden bg-black text-white rounded-[22px]">
+        <div className="relative h-[778px] w-[393px] shrink-0 overflow-hidden bg-black text-white ">
 
         {/* ================================================= */}
         {/* HEADER */}
@@ -319,7 +319,7 @@ export default function HomePage({
         {/* ================================================= */}
 
         <nav className="absolute bottom-[20px] left-1/2">
-            <Footer name="" />
+            <Footer name="xxx" />
         </nav>
 
       </div>

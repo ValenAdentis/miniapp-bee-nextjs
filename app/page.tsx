@@ -12,7 +12,7 @@ export default function Home() {
     <PageTransition>
          <main className="flex min-h-screen items-center justify-center bg-white">
       {/* 393 × 674 App Screen */}
-      <div className="relative h-[674px] w-[393px] overflow-hidden rounded-[22px] bg-black">
+      <div className="relative h-[674px] w-[393px] overflow-hidden bg-black">
 
         {/* Top glow */}
         <div
