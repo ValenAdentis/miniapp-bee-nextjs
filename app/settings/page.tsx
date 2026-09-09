@@ -275,7 +275,7 @@ export default function SettingsPage({
             left-1/2
           "
         >
-            <Footer />
+            <Footer name="xxx" />
         </nav>
 
       </main>
